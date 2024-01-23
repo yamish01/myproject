@@ -11,14 +11,32 @@ class _StartDisplayState extends State<StartDisplay> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
-          title: Center(child: Text("This is Title"))),
+      //appBar: AppBar(
+      //   backgroundColor: Colors.blueAccent,
+      // title: const Center(child: Text("This is Title"))),
       body: Column(
         children: [
-          Text("this the start screen"),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          Stack(children: [
+            Image.asset(
+              "images/Mexican-Red-Bean-Salad-with-Corn-and-Chickpeas-Recipe.jpg",
+              height: 200,
+              width: MediaQuery.of(context).size.width,
+              fit: BoxFit.cover,
+            ),
+            const Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: Center(
+                    child: Text(
+                  "corn salad with red beans",
+                  style: TextStyle(
+                      fontSize: 30, color: Color.fromARGB(255, 255, 255, 255)),
+                )))
+          ]),
+          const Text("this the start screen"),
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 20),
             child: Text("this is working space"),
           ),
           const Row(
@@ -37,11 +55,11 @@ class _StartDisplayState extends State<StartDisplay> {
               Text("168 Reviews"),
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.symmetric(vertical: 40),
                 child: Column(
                   children: [
                     Icon(Icons.hourglass_top),
@@ -51,7 +69,7 @@ class _StartDisplayState extends State<StartDisplay> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.symmetric(vertical: 40),
                 child: Column(
                   children: [
                     Icon(Icons.microwave),
@@ -61,7 +79,7 @@ class _StartDisplayState extends State<StartDisplay> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.symmetric(vertical: 40),
                 child: Column(
                   children: [
                     Icon(Icons.receipt_long),
@@ -73,19 +91,41 @@ class _StartDisplayState extends State<StartDisplay> {
             ],
           ),
           const Padding(
-            padding: EdgeInsets.all(8),
+            padding: EdgeInsetsDirectional.symmetric(vertical: 40),
             child: Text(
               "ingradient required",
               style: TextStyle(
                   fontWeight: FontWeight.w100,
                   fontSize: 20,
-                  color: Color.fromARGB(137, 205, 5, 5)),
+                  color: Colors.blue),
             ),
           ),
           Container(
-              child: Row(
-            children: [Icon(Icons.circle)],
-          ))
+            margin: const EdgeInsets.symmetric(vertical: 2),
+            color: const Color.fromARGB(255, 136, 136, 136),
+            child: Row(children: [
+              Container(
+                margin: const EdgeInsets.all(8),
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle, color: Colors.green),
+                child: const Icon(Icons.add, size: 24, color: Colors.white),
+              ),
+              const Text("Loren Ipsum"),
+            ]),
+          ),
+          Container(
+            color: const Color.fromARGB(221, 118, 117, 117),
+            child: Row(children: [
+              Container(
+                margin: const EdgeInsets.all(8),
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color.fromARGB(255, 191, 9, 9)),
+                child: const Icon(Icons.add, size: 24, color: Colors.white),
+              ),
+              const Text("Loren Ipsum"),
+            ]),
+          ),
         ],
       ),
     ); //scaffold

@@ -12,8 +12,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 102, 78, 209),
-          title: Center(
+          backgroundColor: const Color.fromARGB(255, 102, 78, 209),
+          title: const Center(
               child: Text("Corn Salad with Red Beans ",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -120,10 +120,25 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.all(8.0),
-            child: Text("ingradiant required "),
-          )
+            child: Text(
+              "ingradiant required ",
+              style: TextStyle(
+                fontWeight: FontWeight.w100,
+                fontSize: 20,
+                color: Color.fromARGB(137, 205, 5, 5),
+              ),
+            ),
+          ),
+          Row(children: [
+            Container(
+              margin: const EdgeInsets.all(3),
+              decoration: const BoxDecoration(
+                  shape: BoxShape.circle, color: Colors.green),
+              child: const Icon(Icons.add, size: 24, color: Colors.white),
+            ),
+          ]),
         ]));
   }
 }
