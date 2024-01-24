@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myproject/homepage.dart';
 import 'package:myproject/start_display.dart';
 import 'package:myproject/startscreen.dart';
 
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const StartDisplay(),
+      home: const StartScreen(),
     );
   }
 }
