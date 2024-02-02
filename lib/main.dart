@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:myproject/firstpage.dart';
 import 'package:myproject/homepage.dart';
+
 import 'package:myproject/start_display.dart';
 import 'package:myproject/startscreen.dart';
 
-import 'start_display.dart';
+import 'firstpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const StartScreen(),
+      home: const FirstPage(),
     );
   }
 }

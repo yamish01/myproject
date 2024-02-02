@@ -88,88 +88,91 @@ class _StartScreenState extends State<StartScreen> {
               bottom: 0,
               left: 0,
               right: 0,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(children: [
-                    Expanded(
-                        child: Container(
-                      height: 100,
-                      width: MediaQuery.of(context).size.width,
-                      margin: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Color.fromARGB(255, 102, 102, 102),
-                              blurStyle: BlurStyle.normal,
-                              blurRadius: 8,
-                              spreadRadius: 3,
-                              offset: Offset(03, 05),
-                            )
-                          ],
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          borderRadius: BorderRadius.circular(28)),
-                      child: const Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.home,
-                            size: 30,
-                            shadows: [
-                              Shadow(
-                                  color: Color.fromARGB(255, 102, 102, 102),
-                                  blurRadius: 4)
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(children: [
+                      Expanded(
+                          child: Container(
+                        height: 100,
+                        width: MediaQuery.of(context).size.width,
+                        margin: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color.fromARGB(255, 102, 102, 102),
+                                blurStyle: BlurStyle.normal,
+                                blurRadius: 8,
+                                spreadRadius: 3,
+                                offset: Offset(03, 05),
+                              )
                             ],
-                          ),
-                          Text(
-                            "Home",
-                            style: TextStyle(fontSize: 20, shadows: [
-                              Shadow(
-                                  color: Color.fromARGB(255, 102, 102, 102),
-                                  blurRadius: 4)
-                            ]),
-                          ),
-                        ],
-                      ),
-                    )),
-                    Expanded(
-                        child: Container(
-                      margin: const EdgeInsets.all(12),
-                      width: 20,
-                      height: 100,
-                      decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Color.fromARGB(255, 80, 79, 79),
-                              blurStyle: BlurStyle.normal,
-                              blurRadius: 8,
-                              spreadRadius: 3,
-                              offset: Offset(03, 05),
-                            )
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            borderRadius: BorderRadius.circular(28)),
+                        child: const Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.home,
+                              size: 30,
+                              shadows: [
+                                Shadow(
+                                    color: Color.fromARGB(255, 102, 102, 102),
+                                    blurRadius: 4)
+                              ],
+                            ),
+                            Text(
+                              "Home",
+                              style: TextStyle(fontSize: 20, shadows: [
+                                Shadow(
+                                    color: Color.fromARGB(255, 102, 102, 102),
+                                    blurRadius: 4)
+                              ]),
+                            ),
                           ],
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          borderRadius: BorderRadius.circular(28)),
-                      child: const Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.devices,
-                            size: 30,
-                            shadows: [
-                              Shadow(color: Colors.black, blurRadius: 4)
+                        ),
+                      )),
+                      Expanded(
+                          child: Container(
+                        margin: const EdgeInsets.all(12),
+                        width: 20,
+                        height: 100,
+                        decoration: BoxDecoration(
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color.fromARGB(255, 80, 79, 79),
+                                blurStyle: BlurStyle.normal,
+                                blurRadius: 8,
+                                spreadRadius: 3,
+                                offset: Offset(03, 05),
+                              )
                             ],
-                          ),
-                          Text(
-                            "Link",
-                            style: TextStyle(fontSize: 20, shadows: [
-                              Shadow(color: Colors.black, blurRadius: 4)
-                            ]),
-                          ),
-                        ],
-                      ),
-                    )),
-                  ]),
-                ],
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            borderRadius: BorderRadius.circular(28)),
+                        child: const Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.devices,
+                              size: 30,
+                              shadows: [
+                                Shadow(color: Colors.black, blurRadius: 4)
+                              ],
+                            ),
+                            Text(
+                              "Link",
+                              style: TextStyle(fontSize: 20, shadows: [
+                                Shadow(color: Colors.black, blurRadius: 4)
+                              ]),
+                            ),
+                          ],
+                        ),
+                      )),
+                    ]),
+                  ],
+                ),
               )),
         ]),
       ),
